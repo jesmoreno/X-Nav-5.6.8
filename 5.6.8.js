@@ -2,10 +2,10 @@
 tagImages = function (){
 
 	var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-	//var tag = $("#tag").val();
-	//alert(tag);
+	var tag = $("#tag").val();
+
 	$.getJSON( flickerAPI, {
-		tags: "fuenlabrada",
+		tags: tag,
 		tagmode: "any",
 		format: "json"
 	})
